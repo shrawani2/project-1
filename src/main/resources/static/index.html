@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spring Boot Web Application</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        /* Inline CSS for demonstration; move to styles.css in production */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #6200ea;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        main {
+            padding: 2rem;
+            text-align: center;
+        }
+        button {
+            background-color: #6200ea;
+            color: #fff;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #3700b3;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Spring Boot!</h1>
+        <p>Building modern web applications with ease</p>
+    </header>
+
+    <main>
+        <p th:text="'Hello, ' + ${name} + '!'" style="font-size: 1.2rem;">Hello, User!</p>
+        <p>This is a sample application to showcase a dynamic web page.</p>
+        <button onclick="showAlert()">Click Me</button>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Spring Boot Application. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Inline JavaScript for demonstration; move to a JS file in production
+        function showAlert() {
+            alert('Welcome to the Spring Boot web application!');
+        }
+    </script>
+</body>
+</html>
